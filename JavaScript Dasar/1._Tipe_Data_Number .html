@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // document.writeln(100);
+        // document.writeln("</br>");
+        // document.writeln(100.1000);
+
+        //latihan 1 "cek bilangan bulat"
+        // function cekBilangan(num){
+        //     if(num %2 === 0){
+        //         document.writeln(`${num} merupakan bilangan bulat`)
+        //     }else{
+        //         document.writeln(`${num} Bukan Bilangan bulat`);
+        //     }
+        // }
+
+        // cekBilangan(10);
+        // cekBilangan(3.14);
+
+
+        //Latihan 2 "Konversi String to even dan float"
+        // function konversiAngka(str){
+        //     let strToEven = parseInt(str);
+        //     let strToFloat = parseFloat(str);
+        //     document.writeln(`Bilangan Bulat : ${strToEven} <br>`);
+        //     document.writeln(`Bilangan Desimal ${strToFloat}`);
+        // }
+
+        // konversiAngka("42.99"); 
+
+
+        function formatDesimal(angka, digit){
+            let tryed = angka.toFixed(digit);
+            document.writeln(`hasilnya : ${tryed}`);
+        }
+
+        formatDesimal(3.14159, 2);
+
+
+    </script>
+    
+</body>
+</html>
