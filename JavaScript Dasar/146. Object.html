@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person = {
+            "name first": "Aldi",
+            age: 25,
+            isStudent: false
+        };
+
+     document.writeln(person["name first"]);
+     document.writeln(person.age);
+
+
+     document.writeln("<br>")
+     //another cara
+    let car = new Object()
+    car.brand = "toyota";
+    car.tires = "ozo";
+
+    document.writeln(car.brand)
+
+        
+    document.writeln("<br>");
+    //object dengan method
+
+    const dataPegawai = {
+        nama : "agung",
+        alamat : "kebondanas",
+        great : function(){
+            return "hello " + this.nama + "!";
+        }
+    }
+
+    document.writeln(dataPegawai.great());
+    </script>
+</body>
+</html>

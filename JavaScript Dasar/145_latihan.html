@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//KONVERSI DATA
+//2️⃣ Menggunakan dalam if Statement
+       function cekTipeData(input){
+        if(typeof input === "boolean"){
+            console.log("ini adalah boolean");
+        }else if(typeof input === "array"){
+            console.log("Ini adalah array")
+        }else if(typeof input === "object"){
+            console.log("ini adalah object")
+        }else {
+            console.log("tidak dikenali")
+        }
+       }
+        cekTipeData(true);           // Output: Ini adalah boolean
+        cekTipeData([1, 2, 3]);      // Output: Ini adalah array
+        cekTipeData({ nama: "Ali" }); // Output: Ini adalah object
+        cekTipeData(42);
+
+        
+//3️⃣ Memeriksa Elemen dalam Object
+let dataOrang = {
+    nama : "agung",
+    hobi : ["menggambar", "mewarnai"]
+}
+
+if(Array.isArray(dataOrang.hobi)){
+    console.log("ini adalah aray");
+}else if(typeof(dataOrang.nama === "string")){
+    console.log("ini adalah string");
+}else {
+    console.log("terserah kalian saya mah cape");
+}
+
+
+//5️⃣ Filter Hanya Array dalam Array Campuran
+    let mixedData = [123, "Hello", [1, 2, 3], { name: "Ali" }, [4, 5]];
+
+    let onlyArrays = mixedData.filter(item => Array.isArray(item));
+
+    console.log(onlyArrays);
+    </script>
+</body>
+</html>

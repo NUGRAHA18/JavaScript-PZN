@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operasi Aritmatika</title>
+</head>
+<body>
+    <script>
+        //1
+        const a = 1;
+        const b = 2;
+        const result = a.toString() * b.toString();     //output : 2
+        document.writeln(result);
+
+
+        //2 ignore setelah integer
+        document.writeln(`<p>${parseInt("1salah")}`);   //output : 1
+        document.writeln(`<p>${parseFloat("1.1eko")}`); //output : 1
+
+
+        //3 Nan
+        document.writeln(`<p>${Number("salah")}`);      //output : NAN
+        document.writeln(`<p>${Number("1eko")}`);       //Output : NaN
+
+    
+
+        //NaN
+        const first = Number("salah");
+        const totalNumber = first + 100;
+        document.writeln(totalNumber)                   //Output : nan
+        
+
+        //isNan
+        document.writeln(`<p>${isNaN("first")}`);     //Output : True
+        document.writeln(`<p>${isNaN(100)}`);         //Output : False
+        document.writeln(`<p>${isNaN(NaN)}`);         //Output : True
+
+
+        //TYPEOF
+        //#1
+        document.writeln("</br>")    
+        const A = 6;
+        const B = 2;
+        
+        let hasill = Number(A.toString() * B.toString());
+        document.writeln("</br>")
+        document.writeln(Number(A.toString()) * Number(B.toString()));  //Output : 12
+        document.writeln(typeof(hasill));                               //OUTPUT : Number
+
+        ///#2
+        document.writeln("<hr>");
+        const varA = "6";
+        const varB = "3";
+        const hasilAkhir = String(varA * varB);         //output : 18
+        document.writeln(typeof(hasilAkhir));           //output : string
+
+        //ubah string ke int
+        let angka1 = "25";
+        let angka2 = "10";
+        let hasil = parseInt(angka1) + parseInt(angka2) ; // Harusnya 35, bukan "2510"
+        document.write(hasil);
+
+
+        //ubah number ke string
+        document.writeln("<hr>");
+        document.writeln("latihan : 2 <br>");
+        let umur = 21;
+        let tinggi = 170;
+        let Hasil = umur.toString() + tinggi; // Harusnya "21170"
+        document.writeln(Hasil);
+
+
+        //
+        document.writeln("<hr>");
+        document.writeln("latihan : 3 <br>");
+        let d = "5";
+        let e = "4";
+        let HAsil = d * e; // Harusnya 20, bukan NaN
+        document.writeln(HAsil);
+
+
+        //Mengubah-ubah type data dari string ke Number/Float
+        let nilai = "45.78";
+        let angkaBulat = nilai;
+        angkaBulat = parseInt(nilai)  // Harusnya 45
+        let angkaDesimal = nilai; 
+        angkaDesimal = parseFloat(angkaDesimal) // Harusnya 45.78
+
+        document.writeln(angkaBulat + "<br>");
+        document.writeln(angkaDesimal);
+
+
+
+        //latihan next level: 
+
+        document.writeln("<hr>");
+        document.writeln("latihan : 5 validasi input <br>");
+
+        // Buatlah fungsi cekTipe() yang menerima satu parameter dan:
+        // Jika parameter adalah number, cetak "Ini adalah angka".
+        // Jika parameter adalah string, cetak "Ini adalah string".
+        // Jika bukan keduanya, cetak "Tipe data tidak dikenali".
+
+       
+        function cekTipe(input){
+            if(typeof input === "Number"){
+                console.log("ini adalah number");
+            }else if(typeof input === "String"){
+                console.log("Ini adalah string");
+            }else {
+                console.log("tipe data tidak dikenali");
+            }
+        }
+        
+        document.writeln(typeof(100) + "<br>");       // Output: Ini adalah angka
+        document.writeln(typeof("hello") + "<br>");   // Output: Ini adalah string
+        document.writeln(typeof(true));      // Output: Tipe data tidak dikenali
+
+
+</script>
+    
+</body>
+</html>
