@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //soal 1
+     const arrayData = ["Apel", "Mangga", "Jeruk", "Pisang", "Anggur"];
+     const getArray = arrayData[1];
+     document.writeln(`Buah kedua adalah: ${getArray} <br>`);
+
+    
+     //soal 2  Menambahkan dan Menghapus Elemen dalam Array
+     let angka = [10, 20, 30, 40];
+     angka.push(50);        //menambahkan
+     delete angka[0];       //menghapus                     //mengahpus
+     document.writeln(angka + "<br>")    //cetak
+
+    //soal
+
+    function checkArray(data){
+        if(Array.isArray(data)){
+            document.writeln("Ini adalah array");
+        }else {
+            document.writeln("ini bukan array");
+        }
+    }
+    checkArray([1,2,3]); //chek array
+    document.writeln("<br>");
+
+
+    //soal 4 : mengakses element bersarang
+    let data = [
+        ["Ali", 21, "Mahasiswa"],
+        ["Budi", 25, "Pegawai"],
+        ["Citra", 23, "Dokter"]
+    ];
+
+    aksesData = data[1][1];
+    document.writeln(`<p>umur budi adalah ${aksesData} <br>`);
+
+
+
+    //Soal 5: Menjumlahkan Semua Angka dalam Array
+    function calcArr(arrayData){ //5
+        let total = 0; 
+        for(let i=0; i<=arrayData.length; i++){
+            return total += arrayData[i];
+        }
+        return total;
+    }
+
+    document.writeln(calcArr([5, 10, 15]));
+    document.writeln("<br>");
+
+
+    //menjumlahkan array genap 
+    function dataGenap(dataGnp){
+        let result = 0
+        for(let x=0; x<=dataGnp.length;x++){
+            if(x %2==0){
+              result += x;
+            }else{
+                continue;
+            }
+        }
+        return result;
+    }
+
+   document.writeln(dataGenap([1, 2, 3, 4, 5, 6]));//12
+   document.writeln("<br>");
+
+   //menjumlahkan array ganjil
+   function arrayGanjil(dataGanjil){
+        let resultt = 0;
+        for(let a=0; a<=dataGanjil.length; a++){
+            if(a %2===1){
+                resultt +=a;
+            }else{
+                continue;
+            }
+        }
+        return resultt;
+   }
+
+   document.writeln(arrayGanjil([1, 2, 3, 4, 5, 6])); //9
+
+
+   document.writeln("<br>");
+//mengalikan semua array
+function getMultiple(dataMultiple){
+        let result3 = 1;
+        for(let b=0; b< dataMultiple.length; b++){
+             result3 *= dataMultiple[b];
+        }
+
+        return result3;
+   }
+
+   document.writeln(getMultiple([2, 3, 4]));
+   document.writeln("<br>");
+   //mencari array terbesar
+   function getMaxArray(maxArray){
+        return Math.max(...maxArray);
+   }
+
+    document.writeln(getMaxArray([10, 20, 5, 40]))
+    </script>
+    
+
+
+
+</body>
+</html>

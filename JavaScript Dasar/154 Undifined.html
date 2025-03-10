@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //contoh 1 ; akses variabel yang tidak ada nilainya
+        let nama;
+        if(name = undefined){
+            console.log("UNDIFINED");
+        }else{
+            console.log("defined");
+        }
+
+
+        //contoh 2 : akses array yang tidak ada di indexnya
+        const mapel = ["IPA", "IPS", "SEJRAH"];
+
+        
+         if(mapel[4] === undefined){
+            console.log("ARRAY UNDIFINED");
+        }else{
+            console.log("ARRAY DEFINED");
+        }
+        
+    
+        //contoh akses object yang tidak ada property nya :
+        const contohObject = {}
+
+        console.log(contohObject.nama); //undefined
+
+    </script>
+</body>
+</html>

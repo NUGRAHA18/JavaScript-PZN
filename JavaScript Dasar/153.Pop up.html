@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const validasi = confirm("anda yakin mau masuk :?");
+        if(validasi){
+            const nama = prompt("siapa nama anda? ");
+            if(nama === "admin"){
+                alert("hello " + nama);
+            }else{
+                alert("anda bukan bagian dari keluarga admin");
+            }
+        }else{
+            alert("bye");
+        }
+    </script>
+    
+</body>
+</html>

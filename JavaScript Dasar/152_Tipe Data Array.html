@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //contoh object
+        let person = {}
+        
+        //menambah property dan attribue
+        person["Nama"] = "agung";
+        person["hobi"] = "rebahan";
+        person["umur"] = 19;
+
+        //menghapus 
+        delete person["umur"];
+
+        //=============contoh lain
+        const person1 = {
+            nama : "agung",
+            kelas : "9c",
+            "jenis kelamin " : "laki" //Property menggunakan tanda petik jika lebih dari 2 kata
+        }
+        console.log(`nama : ${person.nama}`); //akses array cara 1
+        console.log("nama : " + person1["jenis kelamin "]); //cara 2 jika properti lebih dari 2 kata
+    </script>
+</body>
+</html>
